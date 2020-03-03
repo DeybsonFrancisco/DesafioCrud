@@ -1,1 +1,3 @@
-# DesafioCrud
+# DesafioCrud com .NET core 
+
+
