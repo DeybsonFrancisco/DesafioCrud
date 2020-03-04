@@ -55,14 +55,14 @@ namespace DesafioCrud.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("pessoaId,nome,idade,salario")] Pessoa pessoa)
+        public async Task<IActionResult> Create([Bind("pessoaId,nome,dataNascimento,salario")] Pessoa pessoa)
         {
+            
             if (ModelState.IsValid)
             {
-                bool validate = ValidateIdade.idadeConfirm(pessoa);
-                if (validate == true)
+                //pessoa.dataNascimento = DateTime.Parse(pessoa.dataNascimento.GetDateTimeFormats()[5]);
+                if (ValidateIdade.idadeConfirm(pessoa))
                 {
-                    Console.WriteLine(validate);
                     _context.Add(pessoa);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -93,7 +93,7 @@ namespace DesafioCrud.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("pessoaId,nome,idade,salario")] Pessoa pessoa)
+        public async Task<IActionResult> Edit(int id, [Bind("pessoaId,nome,dataNascimento,salario")] Pessoa pessoa)
         {
             if (id != pessoa.pessoaId)
             {
@@ -104,8 +104,17 @@ namespace DesafioCrud.Controllers
             {
                 try
                 {
-                    _context.Update(pessoa);
-                    await _context.SaveChangesAsync();
+                    if (ValidateIdade.idadeConfirm(pessoa))
+                    {
+                        _context.Update(pessoa);
+                         await _context.SaveChangesAsync();
+
+                    }
+                    else 
+                    {
+                        return View(pessoa);
+                    }
+                   
                 }
                 catch (DbUpdateConcurrencyException)
                 {

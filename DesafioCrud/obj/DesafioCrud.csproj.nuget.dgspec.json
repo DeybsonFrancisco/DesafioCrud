@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\source\\repos\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\desafio\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\source\\repos\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\desafio\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\desafio\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj",
         "projectName": "DesafioCrud",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\desafio\\DesafioCrud\\DesafioCrud\\DesafioCrud.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\DesafioCrud\\DesafioCrud\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\desafio\\DesafioCrud\\DesafioCrud\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,6 +55,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [

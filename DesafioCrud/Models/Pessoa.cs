@@ -11,7 +11,8 @@ namespace DesafioCrud.Models
 
         public String nome { get; set; }
 
-        public int idade { get; set; }
+        public DateTime dataNascimento { get; set; }
+
         public decimal salario { get; set; }
 
 
